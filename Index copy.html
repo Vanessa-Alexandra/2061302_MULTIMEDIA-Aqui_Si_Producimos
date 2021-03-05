@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond';
+            font-size: 20px;
+            background: white;
+        }
+
+        #Título {
+            text-align: center;
+            color: #4d4d4d;
+            margin-top: 5%;
+            margin-bottom: 3%;
+            font-size: 38px;
+        }
+
+        /** ENCABEZADO**/
+        .Encabezado img {
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        /** MENÚ **/
+        nav {
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /** .dropdown-menu{
+            border-bottom-left-radius: 15%;
+            border-top-right-radius: 15%;
+        } **/
+
+        #Inicio:hover {
+            color: #245fae;
+        }
+
+        #Aspirantes:hover {
+            color: #ff9800;
+        }
+
+        #Empresarios:hover {
+            color: #00ddd5;
+        }
+
+        .dropdown-menu {
+            background: rgba(77, 77, 77, 0.5);
+        }
+
+        .dropdown-item {
+            color: white;
+            font-size: 14px;
+        }
+
+
+        /** CARRUSEL**/
+        .carousel-inner img {
+            width: 100%;
+            height: 505px;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+
+        /** GALERÍA **/
+
+        #Fondo_G {
+            background-color: #767b76;
+        }
+
+        div.Gallery {
+            border: 0.4px solid #4d4d4d;
+            border-radius: 15px;
+            width: 290px;
+            margin-bottom: 30px;
+        }
+
+        div.Gallery:hover {
+            filter: brightness(50%);
+        }
+
+        div.Gallery img {
+            width: 100%;
+            height: auto;
+            padding: 2%;
+            background: #4d4d4d;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+            background: white;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+
+        /** CONTACTOS **/
+
+        /**
+        #Nuestro_Equipo {
+            padding-top: 50px;
+            height: 450px;
+            color: #fff;
+            background-color: #4d4d4d;
+            text-align: center;
+            display: inline-block;
+        }
+        **/
+
+        #Nuestro_Equipo {
+            display: flex;
+            align-items: center;
+        }
+
+        #Título {
+            margin-right: 50px;
+        }
+
+        hr {
+            border: none;
+            height: 0.8px;
+            /* Set the hr color */
+            color: #767b7b;
+            /* old IE */
+            background-color: #767b76;
+            /* Modern Browsers */
+            margin-top: 5%;
+        }
+
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 190px;
+            height: 260px;
+            border-bottom-left-radius: 10%;
+            border-top-right-radius: 10%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            width: 190px;
+            height: 260px;
+            border-bottom-left-radius: 10%;
+            border-top-right-radius: 10%;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-front img {
+            width: 190px;
+            height: 260px;
+            border-bottom-left-radius: 10%;
+            border-top-right-radius: 10%;
+            object-fit: cover;
+        }
+
+        .flip-card-back {
+            background-color: #ff9800;
+            color: white;
+            transform: rotateY(180deg);
+            background-image: linear-gradient(180deg, #00ddd5, #767b7b);
+        }
+
+        .Ana,
+        .Heidy,
+        .Juan,
+        .Vanessa {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            font-size: 22px;
+        }
+
+
+        #Carta_1,
+        #Carta_3 {
+            background-color: #00ddd5;
+            background-image: linear-gradient(180deg, #ff9800, #767b7b);
+        }
+
+        /** FORMULARIO **/
+        form {
+            margin-left: 35px;
+        }
+
+
+        /** MAPA **/
+        iframe {
+            border-top-right-radius: 10%;
+            border-bottom-left-radius: 10%;
+        }
+
+
+
+        /** FOOTER**/
+        footer img {
+            width: auto;
+            height: 10%;
+        }
+
+        footer {
+            background-color: #4d4d4d;
+            margin-top: 50px;
+            color: white;
+        }
+
+        footer a,
+        footer a:hover {
+            color: white;
+            opacity: 70%;
+        }
+
+        footer li {
+            font-size: 14px;
+        }
+
+        #Título_Inicio {
+            color: #ff9800;
+            opacity: 100%;
+        }
+
+        #Título_Contáctenos {
+            color: white;
+            opacity: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Container">
+        <div class="Encabezado">
+            <header>
+                <img src="Carpetas/IMGS/Header_con_logo.png" alt="Header con logo">
+            </header>
+        </div>
+        <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav d-flex justyfy-content-center">
+                    <li class="nav-item aling-self">
+                        <a class="nav-link" id="Inicio" href="Index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown aling-self">
+                        <a class="nav-link dropdown-toggle" id="Aspirantes" href="#" id="navbardrop"
+                            data-toggle="dropdown">
+                            Aspirantes
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Asp_1.html">¿Qué es un Productor Multimedia?</a>
+                            <a class="dropdown-item" href="Asp_2.html">Asignaturas</a>
+                            <a class="dropdown-item" href="Asp_3.html">Salidas profesionales</a>
+                            <a class="dropdown-item" href="Asp_4.html">Productos a realizar</a>
+                            <a class="dropdown-item" href="Asp_5.html">Prácticas</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown aling-self">
+                        <a class="nav-link dropdown-toggle" id="Empresarios" href="#" id="navbardrop"
+                            data-toggle="dropdown">
+                            Empresarios
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Emp_1.html">¿Por qué elegir un Productot Multimedia?</a>
+                            <a class="dropdown-item" href="Emp_2.html">Funciones de un Productor Multimedia</a>
+                            <a class="dropdown-item" href="Emp_3.html">Empresas en las que puede trabajar</a>
+                            <a class="dropdown-item" href="Emp_4.html">Elementos para mejorar su negocio</a>
+                        </div>
+                    </li>
+                    <li class="nav-item aling-self">
+                        <a class="nav-link" href="#Contáctenos">Contáctenos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Carpetas/IMGS/1.jpg" alt="Los Angeles" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="Carpetas/IMGS/2.jpg" alt="Chicago" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="Carpetas/IMGS/3.jpg" alt="New York" width="1100" height="500">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+        <h1 id="Título"><b>Galería</b></h1>
+
+        <div class="container-fluid" id="Fondo_G">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="Gallery" class="img-fluid">
+                        <a target="_blank" href="Carpetas/IMGS/3.jpg">
+                            <img src="Carpetas/IMGS/3.jpg" alt="Persona frente a un computador" class="img-fluid">
+                        </a>
+                        <div class="desc">Descripción.</div>
+                    </div>
+                    <div class="Gallery" class="img-fluid">
+                        <a target="_blank" href="Carpetas/IMGS/4.jpeg">
+                            <img src="Carpetas/IMGS/4.jpeg" alt="Persona frente a un computador" class="img-fluid">
+                        </a>
+                        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor urna quis
+                            enim cursus finibus. Sed arcu nunc, dictum ut scelerisque fringilla, dapibus ac risus. Proin
+                            laoreet vel quam nec sagittis. Nunc id accumsan dui, id accumsan velit.</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="Gallery" class="img-fluid">
+                        <a target="_blank" href="Carpetas/IMGS/6.jpg">
+                            <img src="Carpetas/IMGS/7.jpg" alt="Persona frente a un computador" class="img-fluid">
+                        </a>
+                        <div class="desc">Quisque et laoreet dui, quis tincidunt tortor. Nunc in nibh magna. Sed et
+                            tellus auctor, semper tellus eget, scelerisque dolor. Etiam egestas consequat lorem a
+                            pharetra. Praesent sapien arcu, aliquet vitae dignissim quis, tincidunt ac nulla.</div>
+                    </div>
+                    <div class="Gallery" class="img-fluid">
+                        <a target="_blank" href="Carpetas/IMGS/Asignaturas.jpeg">
+                            <img src="Carpetas/IMGS/Asignaturas.jpeg" alt="Persona frente a un computador"
+                                class="img-fluid">
+                        </a>
+                        <div class="desc">Aenean commodo lorem est, eget viverra magna ullamcorper lacinia. Donec congue
+                            tincidunt urna. Curabitur ultricies dictum eros, non varius tortor accumsan eget.</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="Gallery" class="img-fluid">
+                        <a target="_blank" href="Carpetas/IMGS/disenadora-grafica-creativa-frente-ordenador.jpg">
+                            <img src="Carpetas/IMGS/disenadora-grafica-creativa-frente-ordenador.jpg"
+                                alt="Persona frente a un computador" class="img-fluid">
+                        </a>
+                        <div class="desc">Etiam ut leo vel ligula lacinia lobortis et vitae nibh. Suspendisse vel ex
+                            libero. Fusce pharetra vestibulum posuere. Orci varius natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus mus. Pellentesque a libero ipsum. Class aptent taciti
+                            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</div>
+                    </div>
+                    <div class="Gallery" class="img-fluid">
+                        <a target="_blank" href="Carpetas/IMGS/Elementos.jpeg">
+                            <img src="Carpetas/IMGS/Elementos.jpeg" alt="Persona frente a un computador"
+                                class="img-fluid">
+                        </a>
+                        <div class="desc">Aenean eget ultrices odio. Integer eu est urna. Vestibulum facilisis ante eu
+                            dui facilisis dictum.</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="Gallery" class="img-fluid">
+                        <a target="_blank" href="Carpetas/IMGS/Funciones.jpeg">
+                            <img src="Carpetas/IMGS/Funciones.jpeg" alt="Persona frente a un computador"
+                                class="img-fluid">
+                        </a>
+                        <div class="desc">In et nulla leo. Maecenas ligula ante, luctus ut nisi vitae, sagittis
+                            sollicitudin dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+                            ridiculus mus. Phasellus posuere nisl magna, eleifend venenatis libero vestibulum sit amet.
+                        </div>
+                    </div>
+                    <div class="Gallery" class="img-fluid">
+                        <a target="_blank" href="Carpetas/IMGS/Productos.jpeg">
+                            <img src="Carpetas/IMGS/Productos.jpeg" alt="Persona frente a un computador"
+                                class="img-fluid">
+                        </a>
+                        <div class="desc">Ut viverra tincidunt nibh, iaculis facilisis tortor fringilla ut. Ut velit
+                            nibh, malesuada ut semper quis, aliquam vel urna. Fusce neque massa, faucibus id viverra sit
+                            amet, ultricies in ligula.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr>
+        <div id="Nuestro_Equipo" class="container-fluid">
+            <h1 id="Título"><b>Nuestro equipo</b></h1>
+
+            <div class="row">
+
+                <div class="flip-card col-md-3">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Carpetas/IMGS/Ana.jpeg" alt="Avatar">
+                        </div>
+                        <div class="flip-card-back" id="Carta_1">
+                            <h1 class="Ana"><b>Ana Quintero</b></h1>
+                            <p>Estudiante de Producción Multimedia</p>
+                            <p>Técnico en Diseño Gráfico con Integración de Multimedia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card col-md-3">
+                    <div class="flip-card-inner" id="Carta_2">
+                        <div class="flip-card-front">
+                            <img src="Carpetas/IMGS/Heidy.jpeg" alt="Avatar">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 class="Heidy"><b>Heidy Rivera</b></h1>
+                            <p>Estudiante de Producción Multimedia</p>
+                            <p>Técnico en Diseño Gráfico con Integración de Multimedia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card col-md-3">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Carpetas/IMGS/Juan.jpeg" alt="Avatar">
+                        </div>
+                        <div class="flip-card-back" id="Carta_3">
+                            <h1 class="Juan"><b>Juan Duque</b></h1>
+                            <p>Estudiante de Producción Multimedia</p>
+                            <p>Técnico en Diseño Gráfico con Integración de Multimedia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card col-md-3">
+                    <div class="flip-card-inner" id="Carta_4">
+                        <div class="flip-card-front">
+                            <img src="Carpetas/IMGS/Vanessa.jpeg" alt="Avatar">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 class="Vanessa"><b>Vanessa Rentería</b></h1>
+                            <p>Estudiante de Producción Multimedia</p>
+                            <p>Técnico en Diseño Gráfico con Integración de Multimedia</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+
+    <div id="Contáctenos">
+        <h1 id="Título"><b>Contáctenos</b></h1>
+    </div>
+        <div class="row" >
+
+            <div class="col-md-6">
+                <form class="need-validation" method="post">
+                    <!-- <form class="was-validated" method="POST"> -->
+
+                    <div class="form-group">
+                        <label for="uname">Nombre:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="Ingrese nombre" name="nombre"
+                            required>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname">Apellido:</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Ingrese apellido"
+                            name="apellido" required>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor, ingrese su apellido</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" class="form-control" placeholder="Ingrese email" id="email" name="email"
+                            required>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Por favor, ingrese su dirección de correo electrónico.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment">Comentario:</label>
+                        <textarea class="form-control" rows="4" id="comment" name="mensaje" required></textarea>
+                        <div class="valid-feedback">Válido.</div>
+                        <div class="invalid-feedback">Háganos llegar sus opiniones, o solicite información por medio de
+                            su correo electrónico.</div>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember" required> Acepto
+                            términos
+                            <div class="valid-feedback">Válido.</div>
+                            <div class="invalid-feedback">Validar esta casilla para continuar.</div>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark">Enviar</button>
+
+                </form>
+            </div>
+
+
+            </form>
+
+
+            <div class="col-md-6 mt-0">
+                <p>Mapa del sitio</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15862.957431228033!2d-75.5694537!3d6.2979414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8043999e5e767b96!2sSENA%20-%20Centro%20de%20Tecnolog%C3%ADa%20de%20la%20Manufactura%20Avanzada!5e0!3m2!1ses!2sco!4v1607571621783!5m2!1ses!2sco"
+                    width="600" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+
+        </div>
+
+
+
+
+        <footer>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <!-- <img
+                            src="Carpetas/IMGS/Aqui si producimos logo corregido final con los colores buenos.png"> -->
+                        <small class="d-block my-3">© 2020-2021</small> </div>
+                    <div class="col-6 col-md">
+                        <h5><b><a href="#" id="Título_Inicio">Inicio</a></b></h5>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5><b>Aspirantes</b></h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a href="Asp_1.html">¿Qué es un Productor Multimedia?</a>
+                            </li>
+                            <li>
+                                <a href="Asp_2.html">Asignatras</a>
+                            </li>
+                            <li>
+                                <a href="Asp_3.html">Salidas profesionales</a>
+                            </li>
+                            <li>
+                                <a href="Asp_4.html">Productos a realizar</a>
+                            </li>
+                            <li>
+                                <a href="Asp_5.html">Prácticas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5><b>Empresarios</b></h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a href="Emp_1.html">¿Por qué elegir un Productor Multimedia?</a>
+                            </li>
+                            <li>
+                                <a href="Emp_2.html">Funciones de un Productor Multimedia</a>
+                            </li>
+                            <li>
+                                <a href="Emp_3.html">Empresas en las que puede trabajar</a>
+                            </li>
+                            <li>
+                                <a href="Emp_4.html">Elementos para mejorar su negocio</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5><b><a href="#Contáctenos" id="Título_Contáctenos">Contáctenos</a></b></h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

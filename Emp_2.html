@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond';
+            font-size: 20px;
+            background: white;
+        }
+
+        #Título {
+            text-align: center;
+            color: #4d4d4d;
+            margin-top: 5%;
+            margin-bottom: 3%;
+            font-size: 38px;
+        }
+
+        /** ENCABEZADO**/
+        .Encabezado img {
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        /** MENÚ **/
+        nav {
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /** .dropdown-menu{
+            border-bottom-left-radius: 15%;
+            border-top-right-radius: 15%;
+        } **/
+
+        #Inicio:hover {
+            color: #245fae;
+        }
+
+        #Aspirantes:hover {
+            color: #ff9800;
+        }
+
+        #Empresarios:hover {
+            color: #00ddd5;
+        }
+
+        .dropdown-menu {
+            background: rgba(77, 77, 77, 0.5);
+        }
+
+        .dropdown-item {
+            color: white;
+            font-size: 14px;
+        }
+
+
+
+        /** TÍTULO **/
+
+        #Título {
+            margin-right: 50px;
+        }
+
+        hr {
+            border: none;
+            height: 0.8px;
+            /* Set the hr color */
+            color: #767b7b;
+            /* old IE */
+            background-color: #767b76;
+            /* Modern Browsers */
+            margin-top: 5%;
+        }
+
+
+        /** ARTÍCULO **/
+
+        #Imágen {
+            width: 450px;
+            height: 400px;
+            object-fit: cover;
+            padding-right: 20px;
+        }
+
+        #Artículo {
+            margin-top: 20px;
+            margin-bottom: 150px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+
+        /** FOOTER**/
+        footer img {
+            width: auto;
+            height: 10%;
+        }
+
+        footer {
+            background-color: #4d4d4d;
+            margin-top: 50px;
+            color: white;
+        }
+
+        footer a,
+        footer a:hover {
+            color: white;
+            opacity: 70%;
+        }
+
+        footer li {
+            font-size: 14px;
+        }
+
+        #Título_Inicio {
+            color: #ff9800;
+            opacity: 100%;
+        }
+
+        #Título_Contáctenos {
+            color: white;
+            opacity: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Container">
+        <div class="Encabezado">
+            <header>
+                <img src="Carpetas/IMGS/Header_con_logo.png" alt="Header con logo">
+            </header>
+        </div>
+        <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav d-flex justyfy-content-center">
+                    <li class="nav-item aling-self">
+                        <a class="nav-link" id="Inicio" href="Index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown aling-self">
+                        <a class="nav-link dropdown-toggle" id="Aspirantes" href="#" id="navbardrop"
+                            data-toggle="dropdown">
+                            Aspirantes
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Asp_1.html">¿Qué es un Productor Multimedia?</a>
+                            <a class="dropdown-item" href="Asp_2.html">Asignaturas</a>
+                            <a class="dropdown-item" href="Asp_3.html">Salidas profesionales</a>
+                            <a class="dropdown-item" href="Asp_4.html">Productos a realizar</a>
+                            <a class="dropdown-item" href="Asp_5.html">Prácticas</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown aling-self">
+                        <a class="nav-link dropdown-toggle" id="Empresarios" href="#" id="navbardrop"
+                            data-toggle="dropdown">
+                            Empresarios
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Emp_1.html">¿Por qué elegir un Productot Multimedia?</a>
+                            <a class="dropdown-item" href="Emp_2.html">Funciones de un Productor Multimedia</a>
+                            <a class="dropdown-item" href="Emp_3.html">Empresas en las que puede trabajar</a>
+                            <a class="dropdown-item" href="Emp_4.html">Elementos para mejorar su negocio</a>
+                        </div>
+                    </li>
+                    <li class="nav-item aling-self">
+                        <a class="nav-link" href="Index.html">Contáctenos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <h1 id="Título"><b>Funciones de un Productor Multimedia</b></h1>
+
+
+        <hr>
+
+        <div class="row" id="Artículo">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                <img id="Imágen" src="Carpetas/IMGS/Funciones.jpeg">
+            </div>
+
+            <div id="Contenido" class="col-xs-12 col-sm-12 col-md-6 col-lg-7 col-xl-7">
+                Un productor multimedia debe cumplir con las funciones requeridas para la buena imagen de la empresa
+                como reunirse con sus clientes para crear estrategias de publicidad y sus deseos, diseñar
+                logotipos,crear conceptos visuales para la publicidad, asesorar a los clientes sobre el diseño y sus
+                cambios, etc.
+                <br>
+                <br>
+                Un productor multimedia debe hacer que sus clientes se sientan bien con su producto y lograr
+                transmitirlo que el cliente quiere demostrar con el producto o servicio que está vendiendo.
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <!-- <img
+                            src="Carpetas/IMGS/Aqui si producimos logo corregido final con los colores buenos.png"> -->
+                        <small class="d-block my-3">© 2020-2021</small> </div>
+                    <div class="col-6 col-md">
+                        <h5><b><a href="#" id="Título_Inicio">Inicio</a></b></h5>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5><b>Aspirantes</b></h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a href="Asp_1.html">¿Qué es un Productor Multimedia?</a>
+                            </li>
+                            <li>
+                                <a href="Asp_2.html">Asignatras</a>
+                            </li>
+                            <li>
+                                <a href="Asp_3.html">Salidas profesionales</a>
+                            </li>
+                            <li>
+                                <a href="Asp_4.html">Productos a realizar</a>
+                            </li>
+                            <li>
+                                <a href="Asp_5.html">Prácticas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5><b>Empresarios</b></h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a href="Emp_1.html">¿Por qué elegir un Productor Multimedia?</a>
+                            </li>
+                            <li>
+                                <a href="Emp_2.html">Funciones de un Productor Multimedia</a>
+                            </li>
+                            <li>
+                                <a href="Emp_3.html">Empresas en las que puede trabajar</a>
+                            </li>
+                            <li>
+                                <a href="Emp_4.html">Elementos para mejorar su negocio</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5><b><a href="Index.html" id="Título_Contáctenos">Contáctenos</a></b></h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
